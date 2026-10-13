@@ -5,20 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bittext Consultancy Private Limited</title>
 <meta name="description" content="Bittext Consultancy Private Limited is an Indian consultancy for software companies, providing AI and software advisory, technical interviewing and AI training data services.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2313294B'/%3E%3Crect x='11' y='11' width='10' height='10' fill='%235CC3AE'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bittext Consultancy Private Limited">
+<meta property="og:description" content="Consultancy for software companies on AI, engineering practice and technical hiring.">
+<meta name="theme-color" content="#0E2442">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E2442'/%3E%3Crect x='16' y='16' width='9' height='9' fill='%2363C7B2'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Bittext Consultancy Private Limited",
+  "email": "ranjansrivastava1@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "FN-204, Block-M, Virasha Heights, Kolar Road, Huzur",
+    "addressLocality": "Bhopal",
+    "postalCode": "462042",
+    "addressRegion": "Madhya Pradesh",
+    "addressCountry": "IN"
+  }
+}
+</script>
 <style>
   :root {
-    --ink: #13294B;
-    --text: #2A3645;
-    --muted: #5A6675;
-    --rule: #DCE3EA;
-    --panel: #EFF3F6;
-    --paper: #FFFFFF;
-    --accent: #1F7A6D;
-    --accent-light: #5CC3AE;
+    --navy-950: #091A30;
+    --navy-900: #0E2442;
+    --navy-700: #1D3B63;
+    --ink: #12284A;
+    --text: #2B3646;
+    --muted: #5B6676;
+    --line: #E1E7EE;
+    --mist: #F3F6F9;
+    --teal: #17796A;
+    --teal-soft: #E4F3EF;
+    --teal-light: #63C7B2;
+    --on-dark: #C5D3E4;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   }
 
   * { box-sizing: border-box; }
@@ -30,310 +56,521 @@
 
   body {
     margin: 0;
-    background: var(--paper);
+    background: #fff;
     color: var(--text);
-    font-family: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-family: var(--sans);
     font-size: 1.0625rem;
-    line-height: 1.6;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
   }
 
-  a { color: var(--ink); }
+  a { color: var(--teal); }
 
   :focus-visible {
-    outline: 3px solid var(--accent-light);
+    outline: 3px solid var(--teal-light);
     outline-offset: 3px;
   }
+
+  h1, h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  section[id] { scroll-margin-top: 84px; }
 
   .skip {
     position: absolute;
     left: -9999px;
     top: 12px;
+    z-index: 50;
     background: #fff;
     color: var(--ink);
     padding: 8px 14px;
-    border-radius: 4px;
-    z-index: 10;
+    border-radius: 6px;
   }
   .skip:focus { left: 16px; }
 
   .wrap {
-    max-width: 960px;
+    max-width: 1120px;
     margin: 0 auto;
-    padding-inline: 24px;
+    padding-inline: 32px;
   }
 
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 22px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-family: var(--sans);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: none;
+  }
+  .btn-small { padding: 10px 16px; font-size: 0.95rem; }
+  .btn-primary { background: var(--navy-900); color: #fff; }
+  .btn-primary:hover { background: var(--navy-700); }
+  .btn-accent { background: var(--teal-light); color: var(--navy-950); }
+  .btn-accent:hover { background: #82D5C3; }
+  .btn-ghost { border-color: rgba(255, 255, 255, 0.4); color: #fff; }
+  .btn-ghost:hover { border-color: #fff; }
+  .btn-light { background: #fff; color: var(--navy-900); }
+  .btn-light:hover { background: var(--teal-soft); }
+
+  /* Brand */
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .mark {
+    position: relative;
+    flex: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    background: var(--navy-900);
+  }
+  .mark::after {
+    content: "";
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    width: 9px;
+    height: 9px;
+    background: var(--teal-light);
+  }
+  .brand-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
+  .brand-name span { font-weight: 400; color: var(--muted); }
+
   /* Header */
-  .masthead { background: var(--ink); }
-  .bar {
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+  }
+  .header-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    min-height: 64px;
+    min-height: 72px;
   }
-  .brand {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.375rem;
-    letter-spacing: -0.01em;
-    text-decoration: none;
-  }
-  .bit {
-    width: 12px;
-    height: 12px;
-    background: var(--accent-light);
-    display: inline-block;
-  }
-  .nav { display: flex; gap: 22px; }
-  .nav a {
-    color: #D3DEEA;
-    text-decoration: none;
+  .nav { display: flex; align-items: center; gap: 30px; }
+  .nav a:not(.btn) {
+    color: var(--text);
     font-weight: 500;
+    font-size: 0.98rem;
+    text-decoration: none;
   }
-  .nav a:hover { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
+  .nav a:not(.btn):hover { color: var(--teal); }
 
   /* Hero */
-  .hero { padding-block: 88px 64px; }
+  .hero { background: var(--navy-900); color: #fff; }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 48px;
+    padding-block: 104px 112px;
+  }
   .hero h1 {
     margin: 0 0 24px;
-    max-width: 21ch;
-    color: var(--ink);
-    font-size: clamp(2.1rem, 4.6vw, 3.25rem);
-    line-height: 1.12;
-    letter-spacing: -0.02em;
-    font-weight: 700;
-  }
-  .lede {
-    margin: 0 0 32px;
-    max-width: 60ch;
-    font-size: 1.15rem;
-  }
-  .button {
-    display: inline-block;
-    background: var(--ink);
+    max-width: 23ch;
     color: #fff;
-    padding: 12px 22px;
-    border-radius: 6px;
-    font-weight: 500;
-    text-decoration: none;
+    font-size: clamp(2.3rem, 4.4vw, 3.5rem);
+    line-height: 1.1;
   }
-  .button:hover { background: #1C3A66; }
+  .hero .lede {
+    margin: 0 0 36px;
+    max-width: 58ch;
+    color: var(--on-dark);
+    font-size: 1.18rem;
+  }
+  .actions { display: flex; flex-wrap: wrap; gap: 14px; }
+  .hero-art { display: none; }
+  .hero-art svg { display: block; width: 100%; height: auto; }
+  @media (min-width: 900px) {
+    .hero-grid { grid-template-columns: minmax(0, 1fr) 260px; gap: 80px; }
+    .hero-art { display: block; }
+  }
 
   /* Sections */
-  .section { position: relative; padding-block: 56px; }
-  .section::before,
-  .foot::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 24px;
-    right: 24px;
-    border-top: 1px solid var(--rule);
-  }
+  .section { padding-block: 96px; }
+  .section.alt { background: var(--mist); }
   .section h2 {
-    margin: 0 0 28px;
+    margin: 0 0 12px;
     color: var(--ink);
-    font-size: 1.5rem;
-    line-height: 1.25;
-    letter-spacing: -0.01em;
+    font-size: clamp(1.85rem, 3vw, 2.3rem);
+    line-height: 1.2;
+  }
+  .section-head { max-width: 640px; margin-bottom: 44px; }
+  .section-head p { margin: 0; color: var(--muted); font-size: 1.12rem; }
+
+  /* Icons */
+  .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    background: var(--teal-soft);
+    color: var(--teal);
+  }
+  .icon svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.75;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
   /* Services */
-  .service-grid { display: grid; grid-template-columns: 1fr; }
-  .service h3 {
-    margin: 0 0 8px;
-    color: var(--ink);
-    font-size: 1.25rem;
-    line-height: 1.3;
-  }
-  .service p { margin: 0; max-width: 52ch; }
-  .service--lead {
-    padding-bottom: 36px;
-    margin-bottom: 36px;
-    border-bottom: 1px solid var(--rule);
-  }
-  .service--lead h3 { font-size: 1.375rem; }
-  .service--lead > p { max-width: 64ch; }
-  .scope {
-    list-style: none;
-    margin: 22px 0 0;
-    padding: 0;
+  .feature {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 36px;
+    padding: 44px;
+    background: var(--mist);
+    border: 1px solid var(--line);
+    border-radius: 14px;
   }
-  .scope li {
-    position: relative;
-    padding-left: 20px;
-    max-width: 52ch;
+  .feature h3 {
+    margin: 22px 0 10px;
+    color: var(--ink);
+    font-size: 1.45rem;
+    line-height: 1.25;
   }
-  .scope li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.6em;
-    width: 8px;
-    height: 8px;
-    background: var(--accent-light);
+  .feature-intro p { margin: 0; }
+  .points {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
-  .scope strong { color: var(--ink); font-weight: 700; }
+  .points li {
+    padding-top: 16px;
+    border-top: 2px solid var(--teal-light);
+  }
+  .points strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 24px;
+  }
+  .card {
+    padding: 40px 44px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+  }
+  .card h3 {
+    margin: 22px 0 10px;
+    color: var(--ink);
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+  .card p { margin: 0; }
+  @media (min-width: 640px) {
+    .points { grid-template-columns: 1fr 1fr; gap: 28px 36px; }
+  }
   @media (min-width: 760px) {
-    .scope { grid-template-columns: 1fr 1fr; gap: 20px 40px; }
+    .cards { grid-template-columns: 1fr 1fr; }
+  }
+  @media (min-width: 960px) {
+    .feature { grid-template-columns: 0.85fr 1.35fr; gap: 64px; padding: 52px; }
   }
 
   /* Clients */
-  .clients-lede {
-    margin: 0;
-    max-width: 60ch;
-    font-size: 1.15rem;
+  .split {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .statement {
+    margin: 0 0 16px;
     color: var(--ink);
+    font-size: 1.25rem;
+    line-height: 1.5;
   }
-  .note {
-    margin: 24px 0 0;
-    max-width: 60ch;
-    color: var(--muted);
-    font-size: 0.95rem;
+  .note { margin: 0; color: var(--muted); }
+  .client-types {
+    display: grid;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
-  .service + .service {
-    margin-top: 32px;
-    padding-top: 32px;
-    border-top: 1px solid var(--rule);
+  .client-types li {
+    display: flex;
+    gap: 20px;
+    padding: 26px 28px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
   }
-  @media (min-width: 760px) {
-    .service-grid { grid-template-columns: 1fr 1fr; }
-    .service:first-child { padding-right: 40px; }
-    .service + .service {
-      margin-top: 0;
-      padding-top: 0;
-      border-top: 0;
-      padding-left: 40px;
-      border-left: 1px solid var(--rule);
-    }
+  .client-types h3 {
+    margin: 0 0 4px;
+    color: var(--ink);
+    font-size: 1.12rem;
+    line-height: 1.35;
+  }
+  .client-types p { margin: 0; }
+  @media (min-width: 900px) {
+    .split { grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: start; }
   }
 
-  /* Company register */
+  /* Company */
   .register {
     margin: 0;
-    padding: 6px 24px;
-    background: var(--panel);
-    border-radius: 8px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
   }
   .register div {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2px;
-    padding-block: 14px;
-    border-bottom: 1px solid var(--rule);
+    padding: 18px 28px;
+    border-bottom: 1px solid var(--line);
   }
   .register div:last-child { border-bottom: 0; }
-  .register dt { color: var(--muted); font-weight: 500; font-size: 0.95rem; }
-  .register dd { margin: 0; }
+  .register dt { color: var(--muted); font-size: 0.93rem; font-weight: 500; }
+  .register dd { margin: 0; color: var(--ink); }
   @media (min-width: 600px) {
-    .register div { grid-template-columns: 190px 1fr; gap: 16px; }
+    .register div { grid-template-columns: 170px 1fr; gap: 20px; }
   }
 
-  .contact p { margin: 0; max-width: 60ch; }
-  .contact { padding-bottom: 72px; }
+  /* Contact band */
+  .cta { background: var(--navy-900); color: #fff; }
+  .cta-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    padding-block: 80px;
+  }
+  .cta h2 {
+    margin: 0 0 8px;
+    color: #fff;
+    font-size: clamp(1.85rem, 3vw, 2.3rem);
+    line-height: 1.2;
+  }
+  .cta p { margin: 0; color: var(--on-dark); font-size: 1.12rem; }
 
   /* Footer */
-  .foot {
-    position: relative;
-    padding-block: 24px;
-    color: var(--muted);
-    font-size: 0.9rem;
+  .foot { background: var(--navy-950); color: var(--on-dark); font-size: 0.95rem; }
+  .foot-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 32px;
+    padding-block: 56px 36px;
   }
-  .foot p { margin: 0; }
+  .foot .brand { color: #fff; }
+  .foot .brand-name span { color: var(--on-dark); }
+  .foot .mark { background: var(--navy-700); }
+  .foot-brand p { margin: 16px 0 0; max-width: 44ch; }
+  .foot-nav { display: flex; flex-wrap: wrap; gap: 12px 30px; }
+  .foot-nav a { color: var(--on-dark); text-decoration: none; }
+  .foot-nav a:hover { color: #fff; }
+  .foot-legal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 6px 24px;
+    padding-block: 22px 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    color: #8EA2BC;
+    font-size: 0.88rem;
+  }
+  .foot-legal p { margin: 0; }
 
-  @media (max-width: 600px) {
-    .wrap { padding-inline: 16px; }
-    .brand { font-size: 1.2rem; }
-    .nav { gap: 14px; font-size: 0.95rem; }
-    .hero { padding-block: 56px 44px; }
-    .section { padding-block: 44px; }
-    .section::before,
-    .foot::before { left: 16px; right: 16px; }
-    .register { padding-inline: 16px; }
+  @media (max-width: 760px) {
+    .wrap { padding-inline: 20px; }
+    .nav a:not(.btn) { display: none; }
+    .brand-name { font-size: 1.08rem; }
+    .hero-grid { padding-block: 64px 72px; }
+    .section { padding-block: 64px; }
+    .feature { padding: 28px 22px; }
+    .card { padding: 28px 22px; }
+    .client-types li { padding: 22px 20px; gap: 16px; }
+    .register div { padding: 14px 18px; }
+    .cta-inner { padding-block: 56px; }
+  }
+  @media (max-width: 379px) {
+    .brand-name span { display: none; }
   }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="masthead">
-  <div class="wrap bar">
-    <a class="brand" href="#top" aria-label="Bittext Consultancy, back to top"><span class="bit" aria-hidden="true"></span>bittext</a>
-    <nav class="nav" aria-label="Sections">
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Bittext Consultancy, back to top">
+      <span class="mark" aria-hidden="true"></span>
+      <span class="brand-name">Bittext <span>Consultancy</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
       <a href="#services">Services</a>
+      <a href="#clients">Clients</a>
       <a href="#company">Company</a>
-      <a href="#contact">Contact</a>
+      <a class="btn btn-primary btn-small" href="#contact">Contact us</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
-  <section class="hero wrap" id="top">
-    <h1>Consultancy for software companies on AI, engineering practice and technical hiring.</h1>
-    <p class="lede">Bittext Consultancy Private Limited is a consultancy based in India. We advise software companies on adopting AI and modern engineering practice, conduct technical interviews for engineering hiring, and produce training and evaluation data for AI models.</p>
-    <a class="button" href="#contact">Contact us</a>
-  </section>
-
-  <section class="section wrap" id="services" aria-labelledby="services-title">
-    <h2 id="services-title">Services</h2>
-    <article class="service service--lead">
-      <h3>AI and software advisory</h3>
-      <p>Independent advice for software teams adopting AI or improving how they build software, from early assessment through to a working implementation.</p>
-      <ul class="scope">
-        <li><strong>AI strategy.</strong> Identifying where AI fits a product, estimating cost, effort and risk, and choosing between off-the-shelf models, fine-tuning and custom builds.</li>
-        <li><strong>Implementation.</strong> Designing and building AI features such as retrieval, agents and automated workflows, along with the evaluation and monitoring needed to run them in production.</li>
-        <li><strong>Engineering practice reviews.</strong> Reviewing architecture, code quality, testing, security and release processes against current industry practice, with a prioritised plan of improvements.</li>
-        <li><strong>AI safety and security.</strong> Guardrails, red-teaming and data protection that keep AI systems reliable and resistant to misuse such as prompt injection.</li>
-      </ul>
-    </article>
-    <div class="service-grid">
-      <article class="service">
-        <h3>Technical interviews</h3>
-        <p>Structured technical interviews for software engineering roles, with written, rubric-based feedback on each candidate.</p>
-      </article>
-      <article class="service">
-        <h3>AI training data</h3>
-        <p>Training and evaluation data for AI models: writing expert responses, reviewing model outputs and rating them against quality guidelines.</p>
-      </article>
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Consultancy for software companies on AI, engineering practice and technical hiring.</h1>
+        <p class="lede">Bittext Consultancy Private Limited is a consultancy based in India. We advise software companies on adopting AI and modern engineering practice, conduct technical interviews for engineering hiring, and produce training and evaluation data for AI models.</p>
+        <div class="actions">
+          <a class="btn btn-accent" href="#contact">Get in touch</a>
+          <a class="btn btn-ghost" href="#services">Our services</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><svg viewBox="0 0 256 332" xmlns="http://www.w3.org/2000/svg" focusable="false"><rect x="0" y="0" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="38" y="0" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="76" y="0" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="114" y="0" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="152" y="0" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="190" y="0" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="228" y="0" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.16"/><rect x="0" y="38" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="38" y="38" width="28" height="28" rx="3" fill="#63C7B2"/><rect x="76" y="38" width="28" height="28" rx="3" fill="#63C7B2"/><rect x="114" y="38" width="28" height="28" rx="3" fill="#63C7B2"/><rect x="152" y="38" width="28" height="28" rx="3" fill="#63C7B2"/><rect x="190" y="38" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="228" y="38" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="0" y="76" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.16"/><rect x="38" y="76" width="28" height="28" rx="3" fill="#63C7B2"/><rect x="76" y="76" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="114" y="76" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="152" y="76" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="190" y="76" width="28" height="28" rx="3" fill="#63C7B2"/><rect x="228" y="76" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="0" y="114" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="38" y="114" width="28" height="28" rx="3" fill="#63C7B2"/><rect x="76" y="114" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="114" y="114" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="152" y="114" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="190" y="114" width="28" height="28" rx="3" fill="#63C7B2"/><rect x="228" y="114" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="0" y="152" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.16"/><rect x="38" y="152" width="28" height="28" rx="3" fill="#63C7B2"/><rect x="76" y="152" width="28" height="28" rx="3" fill="#63C7B2"/><rect x="114" y="152" width="28" height="28" rx="3" fill="#63C7B2"/><rect x="152" y="152" width="28" height="28" rx="3" fill="#63C7B2"/><rect x="190" y="152" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="228" y="152" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="0" y="190" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="38" y="190" width="28" height="28" rx="3" fill="#63C7B2"/><rect x="76" y="190" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="114" y="190" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="152" y="190" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="190" y="190" width="28" height="28" rx="3" fill="#63C7B2"/><rect x="228" y="190" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.16"/><rect x="0" y="228" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="38" y="228" width="28" height="28" rx="3" fill="#63C7B2"/><rect x="76" y="228" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="114" y="228" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="152" y="228" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="190" y="228" width="28" height="28" rx="3" fill="#63C7B2"/><rect x="228" y="228" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="0" y="266" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="38" y="266" width="28" height="28" rx="3" fill="#63C7B2"/><rect x="76" y="266" width="28" height="28" rx="3" fill="#63C7B2"/><rect x="114" y="266" width="28" height="28" rx="3" fill="#63C7B2"/><rect x="152" y="266" width="28" height="28" rx="3" fill="#63C7B2"/><rect x="190" y="266" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="228" y="266" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="0" y="304" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="38" y="304" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="76" y="304" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="114" y="304" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.16"/><rect x="152" y="304" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="190" y="304" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.07"/><rect x="228" y="304" width="28" height="28" rx="3" fill="#FFFFFF" fill-opacity="0.16"/></svg></div>
     </div>
   </section>
 
-  <section class="section wrap" id="clients" aria-labelledby="clients-title">
-    <h2 id="clients-title">Clients</h2>
-    <p class="clients-lede">We work with established, well-known technology companies in technical hiring and AI.</p>
-    <ul class="scope">
-      <li><strong>Technical hiring platforms</strong> used by large technology employers to interview and assess engineering candidates.</li>
-      <li><strong>AI training data companies</strong> that supply training and evaluation data to leading AI labs.</li>
-    </ul>
-    <p class="note">We keep client names confidential.</p>
+  <section class="section" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="services-title">Services</h2>
+        <p>We work with software companies in three areas.</p>
+      </div>
+
+      <article class="feature">
+        <div class="feature-intro">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span>
+          <h3>AI and software advisory</h3>
+          <p>Independent advice for software teams adopting AI or improving how they build software, from early assessment through to a working implementation.</p>
+        </div>
+        <ul class="points">
+          <li><strong>AI strategy</strong>Identifying where AI fits a product, estimating cost, effort and risk, and choosing between off-the-shelf models, fine-tuning and custom builds.</li>
+          <li><strong>Implementation</strong>Designing and building AI features such as retrieval, agents and automated workflows, along with the evaluation and monitoring needed to run them in production.</li>
+          <li><strong>Engineering practice reviews</strong>Reviewing architecture, code quality, testing, security and release processes against current industry practice, with a prioritised plan of improvements.</li>
+          <li><strong>AI safety and security</strong>Guardrails, red-teaming and data protection that keep AI systems reliable and resistant to misuse such as prompt injection.</li>
+        </ul>
+      </article>
+
+      <div class="cards">
+        <article class="card">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16v11H9l-5 4z"/><path d="M8 8.5h8M8 11.5h5"/></svg></span>
+          <h3>Technical interviews</h3>
+          <p>Structured technical interviews for software engineering roles, with written, rubric-based feedback on each candidate.</p>
+        </article>
+        <article class="card">
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3L3 8l9 5 9-5z"/><path d="M3 12.5l9 5 9-5"/><path d="M3 16.5l9 5 9-5"/></svg></span>
+          <h3>AI training data</h3>
+          <p>Training and evaluation data for AI models: writing expert responses, reviewing model outputs and rating them against quality guidelines.</p>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <section class="section wrap" id="company" aria-labelledby="company-title">
-    <h2 id="company-title">Company details</h2>
-    <dl class="register">
-      <div><dt>Legal name</dt><dd>Bittext Consultancy Private Limited</dd></div>
-      <div><dt>Company type</dt><dd>Private limited company, incorporated in India</dd></div>
-      <div><dt>CIN</dt><dd>U62013MP2024PTC073660</dd></div>
-      <div><dt>Registered office</dt><dd>FN-204, Block-M, Virasha Heights, Kolar Road, Huzur,<br>Bhopal 462042, Madhya Pradesh, India</dd></div>
-      <div><dt>Directors</dt><dd>Ranjan Srivastava<br>Anshu Srivastava</dd></div>
-    </dl>
+  <section class="section alt" id="clients" aria-labelledby="clients-title">
+    <div class="wrap split">
+      <div class="intro">
+        <h2 id="clients-title">Clients</h2>
+        <p class="statement">We work with established, well-known technology companies in technical hiring and AI.</p>
+        <p class="note">We keep client names confidential.</p>
+      </div>
+      <ul class="client-types">
+        <li>
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.7a3.5 3.5 0 0 1 0 6.6"/><path d="M18 14.4c2.1.7 3.5 2.6 3.5 5.6"/></svg></span>
+          <div>
+            <h3>Technical hiring platforms</h3>
+            <p>Used by large technology employers to interview and assess engineering candidates.</p>
+          </div>
+        </li>
+        <li>
+          <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9.5 10h5v4h-5z"/><path d="M9 2.5V6M15 2.5V6M9 18v3.5M15 18v3.5M2.5 9H6M2.5 15H6M18 9h3.5M18 15h3.5"/></svg></span>
+          <div>
+            <h3>AI training data companies</h3>
+            <p>Supplying training and evaluation data to leading AI labs.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
   </section>
 
-  <section class="section contact wrap" id="contact" aria-labelledby="contact-title">
-    <h2 id="contact-title">Contact</h2>
-    <p>For engagements and enquiries, email <a href="mailto:ranjansrivastava1@gmail.com">ranjansrivastava1@gmail.com</a>.</p>
+  <section class="section" id="company" aria-labelledby="company-title">
+    <div class="wrap split">
+      <div class="intro">
+        <h2 id="company-title">Company details</h2>
+        <p class="note">Incorporated in India under the Companies Act, 2013.</p>
+      </div>
+      <dl class="register">
+        <div><dt>Legal name</dt><dd>Bittext Consultancy Private Limited</dd></div>
+        <div><dt>Company type</dt><dd>Private limited company</dd></div>
+        <div><dt>CIN</dt><dd>U62013MP2024PTC073660</dd></div>
+        <div><dt>Registered office</dt><dd>FN-204, Block-M, Virasha Heights, Kolar Road, Huzur,<br>Bhopal 462042, Madhya Pradesh, India</dd></div>
+        <div><dt>Directors</dt><dd>Ranjan Srivastava<br>Anshu Srivastava</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="cta" id="contact" aria-labelledby="contact-title">
+    <div class="wrap cta-inner">
+      <div>
+        <h2 id="contact-title">Get in touch</h2>
+        <p>For engagements and enquiries, email us.</p>
+      </div>
+      <a class="btn btn-light" href="mailto:ranjansrivastava1@gmail.com">ranjansrivastava1@gmail.com</a>
+    </div>
   </section>
 </main>
 
-<footer class="foot wrap">
-  <p>&copy; 2026 Bittext Consultancy Private Limited</p>
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <div class="foot-brand">
+      <a class="brand" href="#top" aria-label="Bittext Consultancy, back to top">
+        <span class="mark" aria-hidden="true"></span>
+        <span class="brand-name">Bittext <span>Consultancy</span></span>
+      </a>
+      <p>Consultancy for software companies on AI, engineering practice and technical hiring.</p>
+    </div>
+    <nav class="foot-nav" aria-label="Footer">
+      <a href="#services">Services</a>
+      <a href="#clients">Clients</a>
+      <a href="#company">Company</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap foot-legal">
+    <p>&copy; 2026 Bittext Consultancy Private Limited</p>
+    <p>CIN U62013MP2024PTC073660</p>
+  </div>
 </footer>
 </body>
 </html>
