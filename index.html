@@ -18,10 +18,10 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Bittext Consultancy Private Limited",
-  "email": "pranjal.reach@gmail.com",
+  "email": "ranjansrivastava1@gmail.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "FN-204, Block-M, Virasha Heights, Kolar Road, Huzur",
+    "streetAddress": "Block-M, Virasha Heights, Kolar Road, Huzur",
     "addressLocality": "Bhopal",
     "postalCode": "462042",
     "addressRegion": "Madhya Pradesh",
@@ -345,27 +345,6 @@
     .split { grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: start; }
   }
 
-  /* Company */
-  .register {
-    margin: 0;
-    background: #fff;
-    border: 1px solid var(--line);
-    border-radius: 14px;
-  }
-  .register div {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2px;
-    padding: 18px 28px;
-    border-bottom: 1px solid var(--line);
-  }
-  .register div:last-child { border-bottom: 0; }
-  .register dt { color: var(--muted); font-size: 0.93rem; font-weight: 500; }
-  .register dd { margin: 0; color: var(--ink); }
-  @media (min-width: 600px) {
-    .register div { grid-template-columns: 170px 1fr; gap: 20px; }
-  }
-
   /* Contact band */
   .cta { background: var(--navy-900); color: #fff; }
   .cta-inner {
@@ -387,19 +366,22 @@
   /* Footer */
   .foot { background: var(--navy-950); color: var(--on-dark); font-size: 0.95rem; }
   .foot-inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 32px;
-    padding-block: 56px 36px;
+    padding-block: 56px 40px;
+  }
+  @media (min-width: 760px) {
+    .foot-inner { grid-template-columns: 1.4fr 1fr 0.5fr; gap: 48px; }
   }
   .foot .brand { color: #fff; }
   .foot .brand-name span { color: var(--on-dark); }
   .foot .mark { background: var(--navy-700); }
   .foot-brand p { margin: 16px 0 0; max-width: 44ch; }
-  .foot-nav { display: flex; flex-wrap: wrap; gap: 12px 30px; }
-  .foot-nav a { color: var(--on-dark); text-decoration: none; }
-  .foot-nav a:hover { color: #fff; }
+  .foot-h { margin: 0 0 10px; color: #fff; font-weight: 500; }
+  .foot address { font-style: normal; line-height: 1.6; }
+  .foot-col a { color: var(--on-dark); }
+  .foot-col a:hover { color: #fff; }
   .foot-legal {
     display: flex;
     flex-wrap: wrap;
@@ -421,7 +403,6 @@
     .feature { padding: 28px 22px; }
     .card { padding: 28px 22px; }
     .client-types li { padding: 22px 20px; gap: 16px; }
-    .register div { padding: 14px 18px; }
     .cta-inner { padding-block: 56px; }
   }
   @media (max-width: 379px) {
@@ -441,7 +422,6 @@
     <nav class="nav" aria-label="Main">
       <a href="#services">Services</a>
       <a href="#clients">Clients</a>
-      <a href="#company">Company</a>
       <a class="btn btn-primary btn-small" href="#contact">Contact us</a>
     </nav>
   </div>
@@ -524,28 +504,13 @@
     </div>
   </section>
 
-  <section class="section" id="company" aria-labelledby="company-title">
-    <div class="wrap split">
-      <div class="intro">
-        <h2 id="company-title">Company details</h2>
-        <p class="note">Incorporated in India under the Companies Act, 2013.</p>
-      </div>
-      <dl class="register">
-        <div><dt>Legal name</dt><dd>Bittext Consultancy Private Limited</dd></div>
-        <div><dt>Company type</dt><dd>Private limited company</dd></div>
-        <div><dt>CIN</dt><dd>U62013MP2024PTC073660</dd></div>
-        <div><dt>Registered office</dt><dd>FN-204, Block-M, Virasha Heights, Kolar Road, Huzur,<br>Bhopal 462042, Madhya Pradesh, India</dd></div>
-      </dl>
-    </div>
-  </section>
-
   <section class="cta" id="contact" aria-labelledby="contact-title">
     <div class="wrap cta-inner">
       <div>
         <h2 id="contact-title">Get in touch</h2>
         <p>For engagements and enquiries, email us.</p>
       </div>
-      <a class="btn btn-light" href="mailto:pranjal.reach@gmail.com">Mail us</a>
+      <a class="btn btn-light" href="mailto:ranjansrivastava1@gmail.com">Mail us</a>
     </div>
   </section>
 </main>
@@ -559,12 +524,14 @@
       </a>
       <p>Consultancy for software companies on AI, engineering practice and technical hiring.</p>
     </div>
-    <nav class="foot-nav" aria-label="Footer">
-      <a href="#services">Services</a>
-      <a href="#clients">Clients</a>
-      <a href="#company">Company</a>
-      <a href="#contact">Contact Us</a>
-    </nav>
+    <div class="foot-col">
+      <p class="foot-h">Registered office</p>
+      <address>Block-M, Virasha Heights, Kolar Road,<br>Huzur, Bhopal 462042,<br>Madhya Pradesh, India</address>
+    </div>
+    <div class="foot-col">
+      <p class="foot-h">Contact</p>
+      <a href="mailto:ranjansrivastava1@gmail.com">Mail us</a>
+    </div>
   </div>
   <div class="wrap foot-legal">
     <p>&copy; 2026 Bittext Consultancy Private Limited</p>
